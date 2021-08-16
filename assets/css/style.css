@@ -339,6 +339,14 @@ h3 {
   background-color: rgba(33, 150, 243, 0.2);
 }
 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .card {
   margin-bottom: 60px;
   background-color: whitesmoke;
@@ -624,6 +632,7 @@ small {
     padding: 0;
   }
   .card .card-content .card-title {
+    color: rgb(45, 45, 45);
     font-size: 20px;
     line-height: 24px;
   }
