@@ -238,7 +238,7 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
+  background-color: rgb(45,45,45);
   border-left: 3px solid;
 }
 
@@ -293,7 +293,7 @@ h3 {
 }
 
 #intro.section .container {
-  color: white;
+  color: whitesmoke;
   font-weight: 200;
   left: 0;
   position: absolute;
