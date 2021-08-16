@@ -222,16 +222,10 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
   font-weight: 200;
 }
 
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
+
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
+  background-color: rgb(45, 45, 45);
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
