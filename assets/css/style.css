@@ -238,7 +238,7 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: rgb(45,45,45);
+  background-color: darkgray;
   border-left: 3px solid;
 }
 
@@ -556,7 +556,7 @@ small {
     width: 100%;
   }
   nav {
-    background: #fff;
+    background: rgb(45,45,45);
     height: 64px;
     position: absolute;
   }
