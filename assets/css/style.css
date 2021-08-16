@@ -195,6 +195,7 @@ dt {
 
 ul.side-nav {
   width: 190px;
+  background-color: rgb(45, 45, 45);
 }
 
 ul.side-nav li {
