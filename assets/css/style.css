@@ -341,6 +341,7 @@ h3 {
 
 .card {
   margin-bottom: 60px;
+  background-color: rgb(45, 45, 45);
 }
 
 .card .role {
