@@ -527,7 +527,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: whitesmoke !important;
+  color: whitesmoke;
 }
 
 .teal {
