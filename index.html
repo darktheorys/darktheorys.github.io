@@ -155,10 +155,18 @@
   <ul class="oss">
     <li>
       <div class="oss-repo">
-        <a href="https://github.com/BerriAI/litellm/pull/30378">BerriAI/litellm #30378</a>
-        <span class="tag merged">merged</span>
+        <a href="https://github.com/BerriAI/litellm/issues/30377">BerriAI/litellm #30377</a> and
+        <a href="https://github.com/BerriAI/litellm/pull/30378">#30378</a>
+        <span class="tag merged">reported and fixed</span>
       </div>
-      <p class="oss-note">URL-encode the object name in the GCS cache GET path, fixing cache misses on keys containing reserved characters.</p>
+      <p class="oss-note">GCS cache always missed on read when <code>gcs_path</code> was set. Found it, traced it to an unencoded object name in the GET path, shipped the fix.</p>
+    </li>
+    <li>
+      <div class="oss-repo">
+        <a href="https://github.com/langchain-ai/deepagents/issues/5560">langchain-ai/deepagents #5560</a>
+        <span class="tag open">reported</span>
+      </div>
+      <p class="oss-note">Large-result eviction in <code>FilesystemMiddleware</code> derives file paths from <code>tool_call_id</code> and assumes the id is short. LiteLLM round-trips Gemini thought signatures inside it, so the derived filename exceeds the OS limit, the write fails, and the oversized result is silently kept. Reported with a minimal reproduction (<a href="https://github.com/langchain-ai/deepagents/issues/5559">#5559</a>).</p>
     </li>
     <li>
       <div class="oss-repo">
@@ -173,7 +181,15 @@
         <a href="https://github.com/aegra/aegra/pull/522">#522</a>
         <span class="tag open">open</span>
       </div>
-      <p class="oss-note">Release the DB session before thread state and history checkpoint reads; reapply auth-injected metadata on assistant create.</p>
+      <p class="oss-note">Release the DB session before thread state and history checkpoint reads; reapply auth-injected metadata on assistant create. Aegra is the Agent Protocol server the Retorio runtime is built on.</p>
+    </li>
+    <li>
+      <div class="oss-repo">Upstream bug reports</div>
+      <p class="oss-note">
+        <a href="https://github.com/langchain-ai/langchain/issues/32499">langchain #32499</a> (<code>run_name</code> lost on child runnables),
+        <a href="https://github.com/langfuse/langfuse/issues/8263">langfuse #8263</a> (Slack integration 500),
+        <a href="https://github.com/langchain-ai/langchain/issues/8928">langchain #8928</a> (<code>n</code> not forwarded in AzureOpenAI).
+      </p>
     </li>
     <li>
       <div class="oss-repo"><a href="https://github.com/darktheorys/smartrag">darktheorys/smartrag</a></div>
