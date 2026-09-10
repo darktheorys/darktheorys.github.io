@@ -19,6 +19,7 @@
 <link rel="alternate" hreflang="de" href="https://darktheorys.github.io/de/">
 <link rel="alternate" hreflang="x-default" href="https://darktheorys.github.io/">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../mascot.css">
 </head>
 <body>
 <main>
@@ -37,8 +38,8 @@
 
   <p class="lede">
     KI-Ingenieur, der seit 2022 LLM-Systeme im Produktivbetrieb baut und betreibt. Leitender
-    Architekt eines agentischen Coaching-Produkts bei Retorio, verantwortlich für Runtime,
-    Model-Routing, Memory, Evaluation und Observability, durchgehend unter EU-Datenresidenz und
+    Architekt eines agentischen Coaching-Produkts bei Retorio, verantwortlich für die Runtime,
+    Model-Routing, Memory und Observability, durchgehend unter EU-Datenresidenz und
     DSGVO-Vorgaben.
   </p>
 
@@ -49,14 +50,14 @@
       <h3>Retorio GmbH</h3>
       <time>März 2022 – heute</time>
     </div>
-    <p class="job-role">Senior AI Engineer (Werkstudent, März 2022 – Juni 2024) · München, DE</p>
+    <p class="job-role">Senior AI Engineer (Werkstudent bis Juni 2024) · München, DE</p>
     <ul>
-      <li>Verantworte als einziger AI Engineer die Architektur von Tori, einem agentischen Coaching-Produkt: Runtime, Model-Routing, State und Memory, Evaluation und Observability.</li>
-      <li>Runtime auf einem selbst gehosteten Agent-Protocol-Server (Aegra) mit LangGraph und DeepAgents für langfristige Planung und Subagent-Delegation gebaut, mit dauerhaftem Event-Logging (Redis Streams nach PostgreSQL) sowie Langfuse- und OpenTelemetry-Tracing. Mehrstufige Sitzungen sind damit reproduzierbar und auditierbar.</li>
-      <li>Leite den gesamten Modell-Traffic über einen zentralen LiteLLM-Proxy auf Cloud Run gegen Vertex-AI-Endpunkte in der EU: Redis-basierte flottenweite Zugangssteuerung, getrennte Echtzeit- und Feedback-Dienste, Cold Starts von rund 60 Sekunden auf nahezu null reduziert.</li>
-      <li>Memory-Banken pro Nutzer und einen quelladressierten Evidenzspeicher mit bi-temporaler Provenienz (nach PROV-O) entworfen: belegtes Feedback mit Zitaten und saubere Löschung nach DSGVO.</li>
-      <li>SLI- und Messkonzept hinter einem vertraglichen SLA für einen Enterprise-Kunden definiert, auf Basis von echtem Nutzer-Traffic und Fehlersignalen der Anwendungsschicht, um Abbrüche mitten im Stream zu erkennen, die die Metriken von Cloud Run verbergen.</li>
-      <li>Zuvor: FastAPI- und gRPC-Microservices auf Docker/GCP, ein eigenes Gesichtserkennungsmodell und interne NLP-Modelle, LLM-Chains mit Retry- und Fallback-Logik.</li>
+      <li>Verantworte als einziger AI Engineer im Team die Architektur von Tori, einem agentischen Coaching-Produkt, und damit Runtime, Model-Routing, State und Memory sowie Observability.</li>
+      <li>Runtime auf einem selbst gehosteten Agent-Protocol-Server (Aegra) mit LangGraph und DeepAgents für langfristige Planung und Subagent-Delegation gebaut, und dauerhaftes Event-Logging (Redis Streams nach PostgreSQL) sowie OpenTelemetry-Tracing nach Langfuse ergänzt. Mehrstufige Sitzungen sind damit reproduzierbar und auditierbar.</li>
+      <li>Den gesamten Modell-Traffic hinter einem zentralen LiteLLM-Proxy auf Cloud Run gegen Vertex-AI-Endpunkte in der EU zusammengeführt, um eine Redis-basierte flottenweite Zugangssteuerung ergänzt, Echtzeit- und Feedback-Pfade getrennt und Cold Starts von rund 60 Sekunden beseitigt.</li>
+      <li>Memory-Banken pro Nutzer und einen quelladressierten Evidenzspeicher mit bi-temporaler Provenienz (nach PROV-O) entworfen, um belegtes Feedback mit Zitaten und Löschanfragen nach DSGVO zu unterstützen.</li>
+      <li>SLI- und Messansatz hinter einem vertraglichen SLA für einen Enterprise-Kunden definiert, auf Basis von echtem Nutzer-Traffic und Fehlersignalen der Anwendungsschicht, die Abbrüche mitten im Stream sichtbar machen, welche die Metriken von Cloud Run übersehen.</li>
+      <li>Vor Tori: FastAPI- und gRPC-Microservices auf Docker und GCP gebaut, interne Modelle zur Gesichtserkennung und für NLP trainiert und LLM-Chains mit Retry- und Fallback-Logik ausgeliefert.</li>
     </ul>
   </section>
 
@@ -67,7 +68,7 @@
     </div>
     <p class="job-role">Machine Learning Engineer, Praktikum · Istanbul, TR</p>
     <ul>
-      <li>Verfahren zur Merkmalsauswahl auf Basis von Variational Autoencoders in Scala und Deeplearning4j entwickelt.</li>
+      <li>Verfahren zur Merkmalsauswahl auf Basis von Variational Autoencoders in Scala und Deeplearning4j gebaut.</li>
     </ul>
   </section>
 
@@ -78,7 +79,7 @@
     </div>
     <p class="job-role">Software Engineer, Praktikum · Istanbul, TR</p>
     <ul>
-      <li>Interne Android-Anwendung gebaut, die die Kommunikationswege zwischen den Ebenen der Produktionshierarchie verkürzt.</li>
+      <li>Interne Android-Anwendung gebaut, die die Kommunikation zwischen Produktionsteams und Management beschleunigt.</li>
     </ul>
   </section>
 
@@ -131,7 +132,7 @@
   <h2>Technische Kenntnisse</h2>
   <dl class="skills">
     <dt>Programmiersprachen</dt>
-    <dd>Python (sehr sicher), SQL (sehr sicher), Java, C++, Scala</dd>
+    <dd>Python, SQL, Java, C++, Scala</dd>
     <dt>LLM &amp; Agenten</dt>
     <dd>LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG</dd>
     <dt>Observability</dt>
@@ -141,10 +142,10 @@
     <dt>ML &amp; Cloud</dt>
     <dd>PyTorch, TensorFlow, JAX, Computer Vision; GCP (Cloud Run, Cloud SQL, Vertex AI), Azure, CI/CD</dd>
     <dt>Compliance</dt>
-    <dd>DSGVO, EU AI Act, Architekturen mit EU-Datenresidenz</dd>
+    <dd>DSGVO, EU AI Act, EU-Datenresidenz</dd>
   </dl>
 
-  <h2>Ausgewählte Projekte</h2>
+  <h2>Forschung</h2>
 
   <section class="job">
     <div class="job-head">
@@ -152,7 +153,7 @@
       <time>Masterarbeit, TUM</time>
     </div>
     <ul>
-      <li>Eine Taxonomie von Anfragen für RAG-Fehlermodi (Merkmalsextraktion, Disambiguierung, Halluzination) erstellt und explizite gegen implizite Merkmalsextraktion getestet.</li>
+      <li>Eine Taxonomie von Anfragen für RAG-Fehlermodi (Merkmalsextraktion, Disambiguierung, Halluzination) erstellt und explizite gegen implizite Merkmalsextraktion verglichen.</li>
       <li>AbbrvQA erstellt, einen KI-generierten Ambiguitäts-Datensatz, und eine RAG-Pipeline mit Disambiguierungs- und Validierungsmodulen vorgeschlagen.</li>
     </ul>
   </section>
@@ -163,7 +164,7 @@
       <time>Bachelorarbeit, Boğaziçi</time>
     </div>
     <ul>
-      <li>Computer-Vision-Analyse des MovieNet-Datensatzes mit vortrainierten Architekturen in Python. Betreuung: Pınar Yanardağ, Suzan Üsküdarlı.</li>
+      <li>Groß angelegte Computer-Vision-Analyse des MovieNet-Datensatzes mit vortrainierten Architekturen in Python.</li>
     </ul>
   </section>
 
@@ -187,5 +188,6 @@
   </footer>
 
 </main>
+<script src="../mascot.js" defer></script>
 </body>
 </html>

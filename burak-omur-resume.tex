@@ -79,68 +79,68 @@
 %---------------- summary ----------------
 \section{Profile}
 \noindent AI engineer building and running production LLM systems since 2022. Lead architect of an
-agentic coaching product at Retorio, owning runtime, model routing, memory, evaluation, and
-observability end to end under EU data residency and GDPR constraints.
+agentic coaching product at Retorio, owning the runtime, model routing, memory, and observability
+end to end under EU data residency and GDPR constraints.
 
 %---------------- experience ----------------
 \section{Experience}
 
-\role{Retorio GmbH}{Munich, DE}{Senior AI Engineer \textnormal{\small(Working Student, Mar 2022 -- Jun 2024)}}{Mar 2022 -- Present}
+\role{Retorio GmbH}{Munich, DE}{Senior AI Engineer \textnormal{\small(Working Student until Jun 2024)}}{Mar 2022 -- Present}
 \begin{itemize}
-  \item Lead the architecture of \textbf{Tori}, an agentic coaching product, as the sole AI engineer:
-        runtime, model routing, state and memory, evaluation, and observability.
+  \item Lead the architecture of \textbf{Tori}, an agentic coaching product, as the sole AI engineer
+        on the team, covering runtime, model routing, state and memory, and observability.
   \item Built the runtime on a self-hosted Agent Protocol server (Aegra) with LangGraph and DeepAgents
-        for long-horizon planning and subagent delegation, with durable event logging (Redis Streams
-        into PostgreSQL) and Langfuse/OpenTelemetry tracing, making multi-turn sessions replayable
-        and auditable.
-  \item Route all model traffic through a central LiteLLM proxy on Cloud Run against Vertex AI EU
-        endpoints: Redis-backed fleet-wide admission control, isolated real-time and feedback
-        services, cold starts cut from roughly 60s to negligible.
+        for long-horizon planning and subagent delegation, adding durable event logging (Redis
+        Streams into PostgreSQL) and OpenTelemetry tracing into Langfuse, making multi-turn sessions
+        replayable and auditable.
+  \item Consolidated all model traffic behind a central LiteLLM proxy on Cloud Run against Vertex AI
+        EU endpoints, adding Redis-backed fleet-wide admission control, isolating real-time and
+        feedback paths, and eliminating roughly 60-second cold starts.
   \item Designed per-user memory banks and a source-addressed evidence store with bi-temporal
-        provenance (PROV-O style): grounded feedback with citations and clean GDPR erasure.
-  \item Defined the SLI and measurement design behind a contractual SLA for an enterprise customer,
-        using real user traffic and application-layer error signals to catch mid-stream failures
-        that Cloud Run metrics hide.
-  \item Earlier: FastAPI and gRPC microservices on Docker/GCP, an in-house face detection model and
-        proprietary NLP models, LLM chains with retry and fallback handling.
+        provenance (PROV-O style) to support cited feedback and GDPR erasure requests.
+  \item Defined the SLI and measurement approach behind a contractual SLA for an enterprise customer,
+        based on real user traffic and application-layer error signals that surface mid-stream
+        failures Cloud Run metrics miss.
+  \item Before Tori, built FastAPI and gRPC microservices on Docker and GCP, trained in-house face
+        detection and NLP models, and shipped LLM chains with retry and fallback handling.
 \end{itemize}
 
 \role{Tazi.ai}{Istanbul, TR}{Machine Learning Engineer, Intern}{Jul 2020 -- Sep 2020}
 \begin{itemize}
-  \item Developed a feature selection method based on variational autoencoders in Scala and
+  \item Built a feature selection method based on variational autoencoders in Scala and
         Deeplearning4j.
 \end{itemize}
 
 \role{SÜTAŞ Süt Ürünleri A.Ş.}{Istanbul, TR}{Software Engineer, Intern}{Jun 2019 -- Aug 2019}
 \begin{itemize}
-  \item Built an internal Android application to shorten communication paths between production
-        hierarchy levels.
+  \item Built an internal Android application to speed up communication between production teams
+        and management.
 \end{itemize}
 
 %---------------- skills ----------------
 \section{Technical Skills}
-\skill{Languages}{Python (expert), SQL (expert), Java, C++, Scala}
+\skill{Languages}{Python, SQL, Java, C++, Scala}
 \skill{LLM \& Agents}{LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG}
 \skill{Observability}{Langfuse, OpenTelemetry, Grafana}
 \skill{Backend \& Data}{FastAPI, gRPC, Pydantic, Docker, Redis, PostgreSQL / Cloud SQL, PgBouncer, MongoDB}
 \skill{ML \& Cloud}{PyTorch, TensorFlow, JAX, computer vision; GCP (Cloud Run, Cloud SQL, Vertex AI), Azure, CI/CD}
-\skill{Compliance}{GDPR, EU AI Act, EU data residency architectures}
+\skill{Compliance}{GDPR, EU AI Act, EU data residency}
 
 %---------------- projects ----------------
-\section{Selected Projects}
+\section{Research}
 
 \project{Towards Smarter and Context-Aware Retrieval Augmented Generation with LLMs}{M.Sc. Thesis, TUM}
 \begin{itemize}
   \item Built a query taxonomy for RAG failure modes (feature extraction, disambiguation,
-        hallucination) and tested explicit against implicit feature extraction.
+        hallucination) and compared explicit against implicit feature extraction.
   \item Created AbbrvQA, an AI-generated ambiguity dataset, and proposed a RAG pipeline with
         disambiguation and validation modules.
 \end{itemize}
 
 \project{Investigating Bias and Discrimination in Movies Using Deep Learning}{B.Sc. Thesis, Boğaziçi}
 \begin{itemize}
-  \item Computer vision analysis of the MovieNet dataset using pre-trained architectures in Python.
-        Advisors: Pınar Yanardağ, Suzan Üsküdarlı.
+  \item Large-scale computer vision analysis of the MovieNet dataset using pre-trained
+        architectures in Python.
 \end{itemize}
 
 %---------------- education ----------------
