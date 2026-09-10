@@ -9,6 +9,14 @@
 <meta property="og:description" content="Production LLM systems since 2022: agentic runtimes, model routing, evaluation, observability.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://darktheorys.github.io/">
+<meta property="og:image" content="https://darktheorys.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3A5F'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='20' font-weight='700' fill='%23fafaf8' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="alternate" hreflang="en" href="https://darktheorys.github.io/">
+<link rel="alternate" hreflang="de" href="https://darktheorys.github.io/de/">
+<link rel="alternate" hreflang="x-default" href="https://darktheorys.github.io/">
 <style>
   :root {
     --ink: #17171a;
@@ -80,6 +88,8 @@
   .edu time { color: var(--muted); font-size: 14px; margin-left: auto; white-space: nowrap; }
 
   footer { margin-top: 72px; padding-top: 22px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
+  footer p { margin: 0 0 5px; }
+  footer p:last-child { margin-bottom: 0; }
 
   @media (max-width: 560px) {
     main { padding-top: 56px; }
@@ -101,6 +111,7 @@
       <li><a href="https://github.com/darktheorys">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/burak-omur/">LinkedIn</a></li>
       <li><a href="burak-omur-resume.pdf">Resume (PDF)</a></li>
+      <li><a href="de/" hreflang="de" lang="de">Deutsch</a></li>
     </ul>
   </header>
 
@@ -120,9 +131,8 @@
     <p class="job-role">Senior AI Engineer (Working Student, Mar 2022 – Jun 2024) · Munich, DE</p>
     <ul>
       <li>Lead the architecture of Tori, an agentic coaching product, as the sole AI engineer: runtime, model routing, state and memory, evaluation, and observability.</li>
-      <li>Built the runtime on a self-hosted Agent Protocol server (Aegra) with LangGraph and DeepAgents for long-horizon planning and subagent delegation, with durable event logging (Redis Streams into PostgreSQL) making multi-turn sessions replayable and auditable.</li>
+      <li>Built the runtime on a self-hosted Agent Protocol server (Aegra) with LangGraph and DeepAgents for long-horizon planning and subagent delegation, with durable event logging (Redis Streams into PostgreSQL) and Langfuse/OpenTelemetry tracing, making multi-turn sessions replayable and auditable.</li>
       <li>Route all model traffic through a central LiteLLM proxy on Cloud Run against Vertex AI EU endpoints: Redis-backed fleet-wide admission control, isolated real-time and feedback services, cold starts cut from roughly 60s to negligible.</li>
-      <li>Designed a layered evaluation stack: Langfuse for online production scoring, AgentEvals for LangGraph trajectory checks in CI, MLflow for judge-to-human alignment gated on Cohen's κ ≥ 0.6, controlling for self-preference bias.</li>
       <li>Designed per-user memory banks and a source-addressed evidence store with bi-temporal provenance (PROV-O style): grounded feedback with citations and clean GDPR erasure.</li>
       <li>Defined the SLI and measurement design behind a contractual SLA for an enterprise customer, using real user traffic and application-layer error signals to catch mid-stream failures that Cloud Run metrics hide.</li>
       <li>Earlier: FastAPI and gRPC microservices on Docker/GCP, an in-house face detection model and proprietary NLP models, LLM chains with retry and fallback handling.</li>
@@ -203,8 +213,8 @@
     <dd>Python (expert), SQL (expert), Java, C++, Scala</dd>
     <dt>LLM &amp; agents</dt>
     <dd>LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG</dd>
-    <dt>Eval &amp; observability</dt>
-    <dd>Langfuse, AgentEvals, MLflow, DeepEval, OpenTelemetry, Grafana</dd>
+    <dt>Observability</dt>
+    <dd>Langfuse, OpenTelemetry, Grafana</dd>
     <dt>Backend &amp; data</dt>
     <dd>FastAPI, gRPC, Pydantic, Docker, Redis, PostgreSQL / Cloud SQL, PgBouncer, MongoDB</dd>
     <dt>ML &amp; cloud</dt>
@@ -251,8 +261,32 @@
   </ul>
 
   <footer>
-    Turkish (native), English (fluent), German (A2).
+    <p>Turkish (native), English (fluent), German (A2).</p>
+    <p>Last updated <time datetime="2026-09-10">10 September 2026</time>.</p>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Burak \u00d6m\u00fcr",
+    "jobTitle": "Senior AI Engineer",
+    "url": "https://darktheorys.github.io/",
+    "email": "mailto:burak.omur.1998@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Munich", "addressCountry": "DE" },
+    "worksFor": { "@type": "Organization", "name": "Retorio GmbH" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Technical University of Munich" },
+      { "@type": "CollegeOrUniversity", "name": "Bo\u011fazi\u00e7i University" }
+    ],
+    "knowsLanguage": ["tr", "en", "de"],
+    "knowsAbout": ["LLM systems", "agentic runtimes", "LangGraph", "LiteLLM", "LLM evaluation", "observability", "GDPR"],
+    "sameAs": [
+      "https://github.com/darktheorys",
+      "https://www.linkedin.com/in/burak-omur/"
+    ]
+  }
+  </script>
 
 </main>
 </body>

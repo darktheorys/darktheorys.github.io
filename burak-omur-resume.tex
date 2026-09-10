@@ -69,7 +69,6 @@
   {\sffamily\large\color{accent} Senior AI Engineer}\\[0.55em]
   {\small
     Munich, DE \sep
-    (+49) 178 205 7824 \sep
     \href{mailto:burak.omur.1998@gmail.com}{burak.omur.1998@gmail.com} \sep
     \href{https://www.linkedin.com/in/burak-omur/}{LinkedIn} \sep
     \href{https://github.com/darktheorys}{GitHub}
@@ -92,13 +91,11 @@ observability end to end under EU data residency and GDPR constraints.
         runtime, model routing, state and memory, evaluation, and observability.
   \item Built the runtime on a self-hosted Agent Protocol server (Aegra) with LangGraph and DeepAgents
         for long-horizon planning and subagent delegation, with durable event logging (Redis Streams
-        into PostgreSQL) making multi-turn sessions replayable and auditable.
+        into PostgreSQL) and Langfuse/OpenTelemetry tracing, making multi-turn sessions replayable
+        and auditable.
   \item Route all model traffic through a central LiteLLM proxy on Cloud Run against Vertex AI EU
         endpoints: Redis-backed fleet-wide admission control, isolated real-time and feedback
         services, cold starts cut from roughly 60s to negligible.
-  \item Designed a layered evaluation stack: Langfuse for online production scoring, AgentEvals for
-        LangGraph trajectory checks in CI, MLflow for judge-to-human alignment gated on
-        Cohen's $\kappa \geq 0.6$, controlling for self-preference bias.
   \item Designed per-user memory banks and a source-addressed evidence store with bi-temporal
         provenance (PROV-O style): grounded feedback with citations and clean GDPR erasure.
   \item Defined the SLI and measurement design behind a contractual SLA for an enterprise customer,
@@ -124,7 +121,7 @@ observability end to end under EU data residency and GDPR constraints.
 \section{Technical Skills}
 \skill{Languages}{Python (expert), SQL (expert), Java, C++, Scala}
 \skill{LLM \& Agents}{LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG}
-\skill{Eval \& Observability}{Langfuse, AgentEvals, MLflow, DeepEval, OpenTelemetry, Grafana}
+\skill{Observability}{Langfuse, OpenTelemetry, Grafana}
 \skill{Backend \& Data}{FastAPI, gRPC, Pydantic, Docker, Redis, PostgreSQL / Cloud SQL, PgBouncer, MongoDB}
 \skill{ML \& Cloud}{PyTorch, TensorFlow, JAX, computer vision; GCP (Cloud Run, Cloud SQL, Vertex AI), Azure, CI/CD}
 \skill{Compliance}{GDPR, EU AI Act, EU data residency architectures}
