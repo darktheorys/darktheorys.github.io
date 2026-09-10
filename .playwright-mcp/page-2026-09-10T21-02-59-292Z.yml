@@ -1,6 +1,0 @@
-- generic [active] [ref=e1]:
-  - heading "Burak Ömür" [level=1] [ref=e3]
-  - paragraph [ref=e4]: Senior AI Engineer · Munich, DE
-  - separator [ref=e5]
-  - paragraph [ref=e6]: Production LLM systems since 2022. Agentic runtimes, model routing, and observability under EU data residency.
-  - paragraph [ref=e7]: darktheorys.github.io
