@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burak Ömür — Senior AI Engineer</title>
+<meta name="description" content="Senior AI Engineer in München. LLM-Systeme im Produktivbetrieb seit 2022: agentische Runtimes, Model-Routing, Observability.">
+<meta property="og:title" content="Burak Ömür — Senior AI Engineer">
+<meta property="og:description" content="LLM-Systeme im Produktivbetrieb seit 2022: agentische Runtimes, Model-Routing, Observability.">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://darktheorys.github.io/de/">
+<meta property="og:image" content="https://darktheorys.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3A5F'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='20' font-weight='700' fill='%23fafaf8' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="alternate" hreflang="en" href="https://darktheorys.github.io/">
+<link rel="alternate" hreflang="de" href="https://darktheorys.github.io/de/">
+<link rel="alternate" hreflang="x-default" href="https://darktheorys.github.io/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Burak Ömür</h1>
+    <p class="role">Senior AI Engineer · München, DE</p>
+    <ul class="links">
+      <li><a href="mailto:burak.omur.1998@gmail.com">E-Mail</a></li>
+      <li><a href="https://github.com/darktheorys">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/burak-omur/">LinkedIn</a></li>
+      <li><a href="../burak-omur-resume.pdf">Lebenslauf (PDF)</a></li>
+      <li><a href="../" hreflang="en" lang="en">English</a></li>
+    </ul>
+  </header>
+
+  <p class="lede">
+    KI-Ingenieur, der seit 2022 LLM-Systeme im Produktivbetrieb baut und betreibt. Leitender
+    Architekt eines agentischen Coaching-Produkts bei Retorio, verantwortlich für Runtime,
+    Model-Routing, Memory, Evaluation und Observability, durchgehend unter EU-Datenresidenz und
+    DSGVO-Vorgaben.
+  </p>
+
+  <h2>Berufserfahrung</h2>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Retorio GmbH</h3>
+      <time>März 2022 – heute</time>
+    </div>
+    <p class="job-role">Senior AI Engineer (Werkstudent, März 2022 – Juni 2024) · München, DE</p>
+    <ul>
+      <li>Verantworte als einziger AI Engineer die Architektur von Tori, einem agentischen Coaching-Produkt: Runtime, Model-Routing, State und Memory, Evaluation und Observability.</li>
+      <li>Runtime auf einem selbst gehosteten Agent-Protocol-Server (Aegra) mit LangGraph und DeepAgents für langfristige Planung und Subagent-Delegation gebaut, mit dauerhaftem Event-Logging (Redis Streams nach PostgreSQL) sowie Langfuse- und OpenTelemetry-Tracing. Mehrstufige Sitzungen sind damit reproduzierbar und auditierbar.</li>
+      <li>Leite den gesamten Modell-Traffic über einen zentralen LiteLLM-Proxy auf Cloud Run gegen Vertex-AI-Endpunkte in der EU: Redis-basierte flottenweite Zugangssteuerung, getrennte Echtzeit- und Feedback-Dienste, Cold Starts von rund 60 Sekunden auf nahezu null reduziert.</li>
+      <li>Memory-Banken pro Nutzer und einen quelladressierten Evidenzspeicher mit bi-temporaler Provenienz (nach PROV-O) entworfen: belegtes Feedback mit Zitaten und saubere Löschung nach DSGVO.</li>
+      <li>SLI- und Messkonzept hinter einem vertraglichen SLA für einen Enterprise-Kunden definiert, auf Basis von echtem Nutzer-Traffic und Fehlersignalen der Anwendungsschicht, um Abbrüche mitten im Stream zu erkennen, die die Metriken von Cloud Run verbergen.</li>
+      <li>Zuvor: FastAPI- und gRPC-Microservices auf Docker/GCP, ein eigenes Gesichtserkennungsmodell und interne NLP-Modelle, LLM-Chains mit Retry- und Fallback-Logik.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Tazi.ai</h3>
+      <time>Juli 2020 – Sep. 2020</time>
+    </div>
+    <p class="job-role">Machine Learning Engineer, Praktikum · Istanbul, TR</p>
+    <ul>
+      <li>Verfahren zur Merkmalsauswahl auf Basis von Variational Autoencoders in Scala und Deeplearning4j entwickelt.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>SÜTAŞ Süt Ürünleri A.Ş.</h3>
+      <time>Juni 2019 – Aug. 2019</time>
+    </div>
+    <p class="job-role">Software Engineer, Praktikum · Istanbul, TR</p>
+    <ul>
+      <li>Interne Android-Anwendung gebaut, die die Kommunikationswege zwischen den Ebenen der Produktionshierarchie verkürzt.</li>
+    </ul>
+  </section>
+
+  <h2>Open Source</h2>
+  <ul class="oss">
+    <li>
+      <div class="oss-repo">
+        <a href="https://github.com/BerriAI/litellm/issues/30377">BerriAI/litellm #30377</a> und
+        <a href="https://github.com/BerriAI/litellm/pull/30378">#30378</a>
+        <span class="tag merged">gemeldet und behoben</span>
+      </div>
+      <p class="oss-note">Der GCS-Cache lief beim Lesen immer ins Leere, wenn <code>gcs_path</code> gesetzt war. Ursache gefunden, ein nicht kodierter Objektname im GET-Pfad, und den Fix geliefert.</p>
+    </li>
+    <li>
+      <div class="oss-repo">
+        <a href="https://github.com/langchain-ai/deepagents/issues/5560">langchain-ai/deepagents #5560</a>
+        <span class="tag open">gemeldet</span>
+      </div>
+      <p class="oss-note">Die Verdrängung großer Ergebnisse in der <code>FilesystemMiddleware</code> leitet Dateipfade aus der <code>tool_call_id</code> ab und setzt eine kurze ID voraus. LiteLLM transportiert darin Gemini-Thought-Signatures, wodurch der Dateiname das Limit des Betriebssystems überschreitet, der Schreibvorgang fehlschlägt und das übergroße Ergebnis stillschweigend erhalten bleibt. Mit minimalem Reproduktionsfall gemeldet (<a href="https://github.com/langchain-ai/deepagents/issues/5559">#5559</a>).</p>
+    </li>
+    <li>
+      <div class="oss-repo">
+        <a href="https://github.com/langchain-ai/langchain/pull/13815">langchain-ai/langchain #13815</a>
+        <span class="tag merged">übernommen</span>
+      </div>
+      <p class="oss-note"><code>create_llm_result</code> in der OpenAI-Integration berücksichtigt jetzt übergebene kwargs.</p>
+    </li>
+    <li>
+      <div class="oss-repo">
+        <a href="https://github.com/aegra/aegra/pull/521">aegra/aegra #521</a>,
+        <a href="https://github.com/aegra/aegra/pull/522">#522</a>
+        <span class="tag open">offen</span>
+      </div>
+      <p class="oss-note">DB-Session vor dem Lesen von Thread-State und History-Checkpoint freigeben; per Auth injizierte Metadaten beim Anlegen eines Assistants erneut anwenden. Aegra ist der Agent-Protocol-Server, auf dem die Retorio-Runtime aufbaut.</p>
+    </li>
+    <li>
+      <div class="oss-repo">Gemeldete Fehler in Upstream-Projekten</div>
+      <p class="oss-note">
+        <a href="https://github.com/langchain-ai/langchain/issues/32499">langchain #32499</a> (<code>run_name</code> geht bei Child-Runnables verloren),
+        <a href="https://github.com/langfuse/langfuse/issues/8263">langfuse #8263</a> (Slack-Integration antwortet mit 500),
+        <a href="https://github.com/langchain-ai/langchain/issues/8928">langchain #8928</a> (<code>n</code> wird in AzureOpenAI nicht weitergegeben).
+      </p>
+    </li>
+    <li>
+      <div class="oss-repo"><a href="https://github.com/darktheorys/smartrag">darktheorys/smartrag</a></div>
+      <p class="oss-note">Forschungscode zu kontextbewusstem RAG und der Ambiguitäts-Datensatz AbbrvQA aus meiner Masterarbeit.</p>
+    </li>
+  </ul>
+
+  <h2>Technische Kenntnisse</h2>
+  <dl class="skills">
+    <dt>Programmiersprachen</dt>
+    <dd>Python (sehr sicher), SQL (sehr sicher), Java, C++, Scala</dd>
+    <dt>LLM &amp; Agenten</dt>
+    <dd>LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG</dd>
+    <dt>Observability</dt>
+    <dd>Langfuse, OpenTelemetry, Grafana</dd>
+    <dt>Backend &amp; Daten</dt>
+    <dd>FastAPI, gRPC, Pydantic, Docker, Redis, PostgreSQL / Cloud SQL, PgBouncer, MongoDB</dd>
+    <dt>ML &amp; Cloud</dt>
+    <dd>PyTorch, TensorFlow, JAX, Computer Vision; GCP (Cloud Run, Cloud SQL, Vertex AI), Azure, CI/CD</dd>
+    <dt>Compliance</dt>
+    <dd>DSGVO, EU AI Act, Architekturen mit EU-Datenresidenz</dd>
+  </dl>
+
+  <h2>Ausgewählte Projekte</h2>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Towards Smarter and Context-Aware Retrieval Augmented Generation with LLMs</h3>
+      <time>Masterarbeit, TUM</time>
+    </div>
+    <ul>
+      <li>Eine Taxonomie von Anfragen für RAG-Fehlermodi (Merkmalsextraktion, Disambiguierung, Halluzination) erstellt und explizite gegen implizite Merkmalsextraktion getestet.</li>
+      <li>AbbrvQA erstellt, einen KI-generierten Ambiguitäts-Datensatz, und eine RAG-Pipeline mit Disambiguierungs- und Validierungsmodulen vorgeschlagen.</li>
+    </ul>
+  </section>
+
+  <section class="job">
+    <div class="job-head">
+      <h3>Investigating Bias and Discrimination in Movies Using Deep Learning</h3>
+      <time>Bachelorarbeit, Boğaziçi</time>
+    </div>
+    <ul>
+      <li>Computer-Vision-Analyse des MovieNet-Datensatzes mit vortrainierten Architekturen in Python. Betreuung: Pınar Yanardağ, Suzan Üsküdarlı.</li>
+    </ul>
+  </section>
+
+  <h2>Ausbildung</h2>
+  <ul class="edu">
+    <li>
+      <strong>Technische Universität München</strong>
+      <span>M.Sc. Informatik, Note 1,61</span>
+      <time>Okt. 2021 – Juni 2024</time>
+    </li>
+    <li>
+      <strong>Boğaziçi Universität</strong>
+      <span>B.Sc. Computer Engineering, Note 3,75/4,00</span>
+      <time>Sep. 2016 – Juni 2021</time>
+    </li>
+  </ul>
+
+  <footer>
+    <p>Türkisch (Muttersprache), Englisch (fließend), Deutsch (A2).</p>
+    <p>Zuletzt aktualisiert am <time datetime="2026-09-10">10. September 2026</time>.</p>
+  </footer>
+
+</main>
+</body>
+</html>
