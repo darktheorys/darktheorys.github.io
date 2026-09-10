@@ -1,0 +1,161 @@
+%==============================================================
+%  Burak Ömür — Resume
+%  Compile with:  pdflatex burak-omur-resume.tex
+%  (No exotic packages, no fontawesome, compiles anywhere.)
+%==============================================================
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}                 % body serif
+\usepackage[scaled=0.92]{helvet}     % sans for headings
+\usepackage[
+  top=0.95cm, bottom=0.8cm, left=1.4cm, right=1.4cm, footskip=0.4cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+%---------------- palette ----------------
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{muted}{HTML}{5A5A5A}
+\definecolor{rule}{HTML}{C9CED6}
+\color{ink}
+
+%---------------- section headings ----------------
+\titleformat{\section}
+  {\normalfont\sffamily\bfseries\footnotesize\color{accent}}
+  {}{0em}{\MakeUppercase}[\vspace{-0.55em}{\color{rule}\rule{\linewidth}{0.5pt}}]
+\titlespacing*{\section}{0pt}{0.75em}{0.45em}
+
+%---------------- helpers ----------------
+\setlist[itemize]{
+  leftmargin=1.05em, itemsep=0.05em, parsep=0pt, topsep=0.2em, label=\textbullet
+}
+\newcommand{\sep}{\;\raisebox{0.05em}{\textcolor{rule}{\small$\vert$}}\;}
+
+% \role{Company}{Location}{Title}{Dates}
+\newcommand{\role}[4]{%
+  \vspace{0.25em}%
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1}\,\textcolor{muted}{\small #2} & \textcolor{muted}{\small #4}\\[0.05em]
+    \textit{#3} & \\
+  \end{tabularx}%
+  \vspace{-0.15em}%
+}
+
+% \project{Title}{Subtitle}
+\newcommand{\project}[2]{%
+  \vspace{0.25em}%
+  \noindent\textbf{#1}\;\textcolor{muted}{\small\textit{#2}}%
+  \vspace{-0.05em}%
+}
+
+% \skill{Category}{Items}
+\newcommand{\skill}[2]{\noindent\textbf{\small #1:}\; {\small #2}\par\vspace{0.18em}}
+
+\pagestyle{empty}
+\raggedbottom
+
+%==============================================================
+\begin{document}
+
+%---------------- header ----------------
+\begin{center}
+  {\sffamily\bfseries\Huge Burak Ömür}\\[0.32em]
+  {\sffamily\large\color{accent} Senior AI Engineer}\\[0.55em]
+  {\small
+    Munich, DE \sep
+    (+49) 178 205 7824 \sep
+    \href{mailto:burak.omur.1998@gmail.com}{burak.omur.1998@gmail.com} \sep
+    \href{https://www.linkedin.com/in/burak-omur/}{LinkedIn} \sep
+    \href{https://github.com/darktheorys}{GitHub}
+  }
+\end{center}
+\vspace{0.4em}
+
+%---------------- summary ----------------
+\section{Profile}
+\noindent AI engineer building and running production LLM systems since 2022. Lead architect of an
+agentic coaching product at Retorio, owning runtime, model routing, memory, evaluation, and
+observability end to end under EU data residency and GDPR constraints.
+
+%---------------- experience ----------------
+\section{Experience}
+
+\role{Retorio GmbH}{Munich, DE}{Senior AI Engineer \textnormal{\small(Working Student, Mar 2022 -- Jun 2024)}}{Mar 2022 -- Present}
+\begin{itemize}
+  \item Lead the architecture of \textbf{Tori}, an agentic coaching product, as the sole AI engineer:
+        runtime, model routing, state and memory, evaluation, and observability.
+  \item Built the runtime on a self-hosted Agent Protocol server (Aegra) with LangGraph and DeepAgents
+        for long-horizon planning and subagent delegation, with durable event logging (Redis Streams
+        into PostgreSQL) making multi-turn sessions replayable and auditable.
+  \item Route all model traffic through a central LiteLLM proxy on Cloud Run against Vertex AI EU
+        endpoints: Redis-backed fleet-wide admission control, isolated real-time and feedback
+        services, cold starts cut from roughly 60s to negligible.
+  \item Designed a layered evaluation stack: Langfuse for online production scoring, AgentEvals for
+        LangGraph trajectory checks in CI, MLflow for judge-to-human alignment gated on
+        Cohen's $\kappa \geq 0.6$, controlling for self-preference bias.
+  \item Designed per-user memory banks and a source-addressed evidence store with bi-temporal
+        provenance (PROV-O style): grounded feedback with citations and clean GDPR erasure.
+  \item Defined the SLI and measurement design behind a contractual SLA for an enterprise customer,
+        using real user traffic and application-layer error signals to catch mid-stream failures
+        that Cloud Run metrics hide.
+  \item Earlier: FastAPI and gRPC microservices on Docker/GCP, an in-house face detection model and
+        proprietary NLP models, LLM chains with retry and fallback handling.
+\end{itemize}
+
+\role{Tazi.ai}{Istanbul, TR}{Machine Learning Engineer, Intern}{Jul 2020 -- Sep 2020}
+\begin{itemize}
+  \item Developed a feature selection method based on variational autoencoders in Scala and
+        Deeplearning4j.
+\end{itemize}
+
+\role{SÜTAŞ Süt Ürünleri A.Ş.}{Istanbul, TR}{Software Engineer, Intern}{Jun 2019 -- Aug 2019}
+\begin{itemize}
+  \item Built an internal Android application to shorten communication paths between production
+        hierarchy levels.
+\end{itemize}
+
+%---------------- skills ----------------
+\section{Technical Skills}
+\skill{Languages}{Python (expert), SQL (expert), Java, C++, Scala}
+\skill{LLM \& Agents}{LangGraph, LangChain, DeepAgents, Agent Protocol (Aegra), MCP / FastMCP, LiteLLM, RAG}
+\skill{Eval \& Observability}{Langfuse, AgentEvals, MLflow, DeepEval, OpenTelemetry, Grafana}
+\skill{Backend \& Data}{FastAPI, gRPC, Pydantic, Docker, Redis, PostgreSQL / Cloud SQL, PgBouncer, MongoDB}
+\skill{ML \& Cloud}{PyTorch, TensorFlow, JAX, computer vision; GCP (Cloud Run, Cloud SQL, Vertex AI), Azure, CI/CD}
+\skill{Compliance}{GDPR, EU AI Act, EU data residency architectures}
+
+%---------------- projects ----------------
+\section{Selected Projects}
+
+\project{Towards Smarter and Context-Aware Retrieval Augmented Generation with LLMs}{M.Sc. Thesis, TUM}
+\begin{itemize}
+  \item Built a query taxonomy for RAG failure modes (feature extraction, disambiguation,
+        hallucination) and tested explicit against implicit feature extraction.
+  \item Created AbbrvQA, an AI-generated ambiguity dataset, and proposed a RAG pipeline with
+        disambiguation and validation modules.
+\end{itemize}
+
+\project{Investigating Bias and Discrimination in Movies Using Deep Learning}{B.Sc. Thesis, Boğaziçi}
+\begin{itemize}
+  \item Computer vision analysis of the MovieNet dataset using pre-trained architectures in Python.
+        Advisors: Pınar Yanardağ, Suzan Üsküdarlı.
+\end{itemize}
+
+%---------------- education ----------------
+\section{Education}
+\noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \textbf{Technical University of Munich} \textcolor{muted}{\small Munich, DE} & \textcolor{muted}{\small Oct 2021 -- Jun 2024}\\
+  \textit{M.Sc. Informatics} \textcolor{muted}{\small (GPA 1.61)} & \\[0.45em]
+  \textbf{Boğaziçi University} \textcolor{muted}{\small Istanbul, TR} & \textcolor{muted}{\small Sep 2016 -- Jun 2021}\\
+  \textit{B.Sc. Computer Engineering} \textcolor{muted}{\small (GPA 3.75/4.00)} & \\
+\end{tabularx}
+
+\vspace{0.35em}
+\noindent\textbf{\small Languages:}\; {\small Turkish (native), English (fluent), German (A2)}
+
+\end{document}
